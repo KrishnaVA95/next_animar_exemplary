@@ -1,0 +1,19 @@
+@use "../../../../scss/abstracts" as *;
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        p{
+            @include text-style-paragraph-2;  
+        }
+    }
+
+}

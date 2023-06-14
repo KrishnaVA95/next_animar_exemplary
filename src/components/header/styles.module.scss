@@ -1,0 +1,15 @@
+@use "../../scss/abstracts/" as *;
+
+.container{
+    width: 100vw;
+    height: 150px;
+    // margin-bottom: 100px;
+    z-index: 2000;
+    position: sticky;
+    top: 0;
+    background-color: $color-grey-1000;
+    @include effect-style-shadow-3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

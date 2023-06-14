@@ -1,0 +1,61 @@
+@use "./abstracts" as *;
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script:wght@700&display=swap');
+@font-face {
+  font-family: "cursiveStayDreaming";
+  src: url("../assets/fonts/Stay\ Dreaming.otf");
+  
+}
+
+:root {
+  font-size: 60%;
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  color: $color-grey-100;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 500;
+  font-family: 'Caveat', cursive;
+  // font-family: "cursiveStayDreaming";
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}

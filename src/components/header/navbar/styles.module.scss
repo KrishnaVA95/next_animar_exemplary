@@ -1,0 +1,15 @@
+@use "../../scss/abstracts/" as *;
+
+.container{
+
+    ul{
+        display: flex;
+        list-style: none;
+        gap: 32px;
+        li{
+            letter-spacing: 3px;
+
+        }
+
+    }
+}
