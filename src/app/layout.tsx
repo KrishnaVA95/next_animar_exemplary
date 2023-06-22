@@ -1,7 +1,5 @@
-
-
-
-
+import Header from '@/components/header'
+import { PostProvider } from '@/providers/PostsContext'
 import '@/scss/main.scss'
 
 import { Inter } from 'next/font/google'
@@ -19,11 +17,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" >
           <body className={inter.className}>
-
+            <Header></Header>
+            <PostProvider>
               {children}
-
+            </PostProvider>
           </body>
       </html>
   )

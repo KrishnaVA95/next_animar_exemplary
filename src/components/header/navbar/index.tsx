@@ -1,18 +1,26 @@
 import styles from "./styles.module.scss"
+import MenuToggle from "./mobileMenu"
+import NavList from "./navList"
+import { GiShoppingCart } from 'react-icons/gi';
+import { FaUser } from 'react-icons/fa';
 
 
-export default async function MenuToggle(){
-
+export default async function NavBar(){
+    
     return(
-            <nav className={styles.container}>
-                <ul>
-                    <li>Home</li>
-                    <li>Animar</li>
-                    <li>Blog</li>
-                    <li>Contato</li>
-                    <li>Loja</li>
-                </ul>
-            </nav>
+        <nav className={styles.container}>
+            <NavList/>
+            <MenuToggle/>
+            <GiShoppingCart size={35} style={{
+                    color:  "rgb(121, 65, 71)",
+                    cursor: 'pointer',
+                    margin: "10px"
+            }}/>
+            <FaUser size={25} style={{
+                    color:  "rgb(121, 65, 71)",
+                    cursor: 'pointer',
+                    margin: "10px"
+            }}/>            
+        </nav>
     ) 
-        
 }

@@ -1,0 +1,21 @@
+@use "../../../../scss/abstracts/" as *;
+
+.container{
+    display: none;
+    cursor: pointer;
+
+    div{
+        background-color: $color-primary-500;
+        height: 2px;
+        width: 32px;
+        margin: 8px;
+    }
+}
+
+@media(max-width: 1200px){
+    .container{
+        display: block;
+        position: absolute;
+        right: 45px;
+    }
+}

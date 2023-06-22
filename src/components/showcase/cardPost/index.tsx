@@ -7,6 +7,7 @@ interface ICardPost {
     post: IPost
 }
 
+
 export default function CardPost({ post }: ICardPost){
     return(
         <li className={styles.container}>

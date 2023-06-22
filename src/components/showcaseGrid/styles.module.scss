@@ -1,0 +1,14 @@
+@use "../../scss/abstracts/" as *;
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , 300px);
+    //display flex + flex warap, diferencial: Escolhemos o tamanho das colunas "300px"
+
+    grid-gap: 10px;
+    justify-content: center;
+    grid-auto-rows: auto;
+    // encaixes
+    list-style: none;
+
+}

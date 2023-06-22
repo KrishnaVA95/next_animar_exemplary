@@ -3,16 +3,15 @@
 .container{
     position: absolute;
     top: 0;
-    right: 0;
+    right: 0px;
     width: 40%;
     height: 40px;
     display: flex;
     align-items: center;
-    gap: 50px;
-    border-radius: 0px 0px 0px 80px;
-    background-color: $color-primary-500;
+    gap: 50px;  
     color: $color-grey-1000;
     padding-left: 80px;
+    @include effect-style-linear-1;
 
     div{
         display: flex;

@@ -1,0 +1,21 @@
+@use "../../../scss/abstracts/" as *;
+
+.container{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 65%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;  
+    color: $color-grey-50;
+    @include effect-style-linear-3;
+    
+    div{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+}

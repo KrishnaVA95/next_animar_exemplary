@@ -1,0 +1,58 @@
+@use "../../../scss/abstracts/" as *;
+
+.container{
+
+    a{
+        position: absolute;
+        bottom: 230px;
+        width: 170px;
+        height: 60px;
+        // z-index: 1001;
+        background-color: rgba(0,0,0,0.1);
+        color: $color-grey-900;
+        font-size: 22px;
+        border: 1px solid $color-glassmorphism-05;  
+        // border-bottom: 1px solid $color-glassmorphism-05;  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(16px);
+        overflow: hidden;
+    }
+
+     a:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 100%;
+        background:rgba(255,255,255,0.5) ;
+        transform: skewX(45deg) translateX(450px);
+        transition: 0.7s;
+    }
+    
+     a:hover::before{
+        transform: skewX(45deg) translateX(-350px);
+    }
+}
+
+
+
+@media(max-width: 850px){
+    .container{
+        a{
+            bottom: 230px;
+            width: 120px;
+            height: 50px;
+            font-size: 16px;
+        }
+    }
+}
+@media(max-width: 450px){
+    .container{
+        a{
+            bottom: 25px;
+        }
+    }
+}

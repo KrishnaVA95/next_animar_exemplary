@@ -2,7 +2,6 @@
 import { Swiper, SwiperSlide} from 'swiper/react'
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper'
 import 'swiper/scss'
-import Link from "next/link"
 
 import Image from 'next/image'
 
@@ -10,6 +9,7 @@ import style from "./styles.module.scss"
 import imageBlog from "@/assets/image/blog.jpg"
 import imageContact from "@/assets/image/contact.jpg"
 import imageShoop from "../../assets/image/shoop.jpg"
+import BtnAnchorGlassmorphism from '../buttons/btnAnchor'
 
 // import 'swiper/scss/navigate'
 // import 'swiper/scss/pagination'
@@ -37,9 +37,8 @@ export default function CarouselBanner() {
         <SwiperSlide className={style.container_image}>
           <span></span>
           <div>
-            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laudantium pariatur sequi possimus eius autem cupiditate cum officia libero, ipsa ea! Pariatur expedita a odit amet, mollitia nam consequuntur earum!</h6>
-            <Link  href={`/blog/posts`}> Acessar Loja </Link>
-
+            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit!</h6>
+            <BtnAnchorGlassmorphism text='Acessar Loja' url='/blog/posts'/>
           </div>
           <Image
             src={imageShoop}
@@ -50,10 +49,8 @@ export default function CarouselBanner() {
         <SwiperSlide className={style.container_image}>
           <span></span>
           <div>
-            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laudantium pariatur sequi possimus eius autem cupiditate cum officia libero, ipsa ea! Pariatur expedita a odit amet, mollitia nam consequuntur earum!</h6>
-
-            <Link  href={`/blog/posts`}> Acessar Loja </Link>
-
+            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laudantium pariatur sequi possimus eius autem cupiditate cum officia.</h6>
+            <BtnAnchorGlassmorphism text='Acessar Loja' url='/blog/posts'/>
           </div>
           <Image
             src={imageContact}
@@ -64,10 +61,8 @@ export default function CarouselBanner() {
         <SwiperSlide className={style.container_image}>
           <span></span>
           <div>
-            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laudantium pariatur sequi possimus eius autem cupiditate cum officia libero, ipsa ea! Pariatur expedita a odit amet, mollitia nam consequuntur earum!</h6>
-
-            <Link  href={`/blog/posts`}> Acessar Blog </Link>
-
+            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Pariatur expedita a odit amet, mollitia nam consequuntur earum!</h6>
+            <BtnAnchorGlassmorphism text='Acessar Loja' url='/blog/posts'/>
           </div>
           <Image
             src={imageBlog}

@@ -1,0 +1,34 @@
+@use "../../../scss/abstracts/" as *;
+
+
+.container {
+    &[data-color='first'] {
+        background-color: $color-primary-100;
+    }
+
+    &[data-color='second'] {
+        background-color: $color-primary-200;
+    }
+
+    width: 30rem;
+    height: fit-content;
+
+    border-radius: 0.8rem;
+    padding: 1.4rem;
+
+    color: $color-grey-50;
+    text-align: center;
+
+    @include effect-style-shadow-1;
+
+    h2 {
+        margin-bottom: 1.4rem;
+        @include text-style-header-3;
+    }
+
+    p {
+        margin-bottom: 1.4rem;
+        @include text-style-paragraph-1;
+    }
+}
+

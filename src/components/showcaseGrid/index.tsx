@@ -1,17 +1,14 @@
 import { api } from "@/services/api";
-import CardPost from "./cardPost"
 import styles from "./styles.module.scss"
-import SeparatorPage from "@/components/separator";
+import CardPostGrid from "./CardPostGrid";
+import SeparatorPage from "../separator";
+
 
 export interface IPost {
     id: number;
     title: string;
     description: string;
     content: string[];
-    image: string;
-    emphasis: boolean;
-    created_at: string;
-    update_at: string;
 }
 
 async function getPosts() {
@@ -24,14 +21,14 @@ async function getPosts() {
     }
 }
 
-export default async function Showcase(){
+export default async function ShowcaseGrid(){
     const posts = await getPosts()
     return(
         <>
                 <SeparatorPage title="Blog Animar"/>
                 <ul className={styles.container}>
                     {posts.map((post) =>(
-                        <CardPost key={post.id} post={post}/>    
+                        <CardPostGrid key={post.id} post={post} color={"first"}/>    
                     ))}
                 </ul>
         </>

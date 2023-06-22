@@ -1,18 +1,6 @@
-@use "../../../scss/abstracts/" as *;
+@use "../../../../scss/abstracts/" as *;
 
 .container{
-    position: absolute;
-    top: 40px;
-    right: 0px;
-    width: 60%;
-    height: 105px;
-    display: flex;
-    align-items: center;
-    gap: 10px;  
-    color: $color-primary-500;
-    @include effect-style-linear-2;
-    @include effect-style-shadow-4;
-    ul{
         padding-left: 12%;
         display: flex;
         list-style: none;
@@ -22,15 +10,15 @@
             a{
                 color: $color-primary-500;
             }
+            a:hover{
+                font-weight: 1000;
+            }
         }
-    }
 }
 
 
 @media(max-width: 1200px){
     .container{
-        letter-spacing: 2px;
-        ul{
             position: absolute;
             top: 105px;
             right: 0;
@@ -48,6 +36,5 @@
             span{
                 display: none;
             }
-        }
     }
 }
