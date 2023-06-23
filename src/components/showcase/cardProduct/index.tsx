@@ -10,11 +10,24 @@ interface ICardProduct {
 export default function CardProduct({ product }: ICardProduct){
     return(
         <li className={styles.container}>
-                <div>
-                    <h2>{product.name}</h2>
+                <div className={styles.containerImage}>
                 </div>
-                <p>{product.description}</p> 
-                <Link  href={`/shop/${product.id}`}> Detail </Link>
+                <h2>{product.name}</h2>
+
+                <div className={styles.containerOpacity}>
+                    <p>{product.description}</p> 
+                    <span>R${product.value},00</span>
+                    
+                </div>
+
+
+                <div className={styles.containerBtns}>
+                    <Link  href={`/shop/${product.id}`}> Detail </Link>
+                    <button>
+                        Add to cart
+                    </button>
+
+                </div>
         </li>
     ) 
 }
