@@ -4,18 +4,23 @@
     position: absolute;
     top: 0;
     left: 0px;
-    width: 65%;
-    height: 20vh;
+    width: 57%;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;  
     color: $color-grey-50;
-    @include effect-style-linear-3;
-    
+    @include effect-style-linear-3;  
     div{
         display: flex;
         gap: 8px;
         align-items: center;
+    }
+}
+
+@media(max-width: 500px){
+    .container{
+        height: 120px;
     }
 }

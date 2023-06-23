@@ -4,11 +4,13 @@
     position: absolute;
     top: 0;
     right: 0px;
-    width: 40%;
-    height: 40px;
+    width: 48%;
+    min-height: 40px;
     display: flex;
     align-items: center;
-    gap: 50px;  
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;  
     color: $color-grey-1000;
     padding-left: 80px;
     @include effect-style-linear-1;
@@ -17,16 +19,22 @@
         display: flex;
         gap: 8px;
         align-items: center;
-
-
     }
-
 }
 
-@media(max-width: 500px){
+@media(max-width: 1200px){
     .container{
         border-radius: none;
         justify-content:  space-around;
         width: 100%;
+        height: fit-content;
+        background: $color-primary-500;
+        padding-left: 0;
+    }
+}
+@media(max-width: 500px){
+    .container{
+        font-size: 12px;
+        z-index: 100;
     }
 }

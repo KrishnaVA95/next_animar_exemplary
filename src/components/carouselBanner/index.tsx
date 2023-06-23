@@ -8,8 +8,11 @@ import Image from 'next/image'
 import style from "./styles.module.scss"
 import imageBlog from "@/assets/image/blog.jpg"
 import imageContact from "@/assets/image/contact.jpg"
-import imageShoop from "../../assets/image/shoop.jpg"
 import BtnAnchorGlassmorphism from '../buttons/btnAnchor'
+import imageShoop from "../../assets/image/shoop.jpg"
+import doce from "../../assets/image/doce.jpg"
+import lojaEx from "../../assets/image/lojaEx.jpg"
+import presente from "../../assets/image/presente.jpg"
 
 // import 'swiper/scss/navigate'
 // import 'swiper/scss/pagination'
@@ -41,8 +44,8 @@ export default function CarouselBanner() {
             <BtnAnchorGlassmorphism text='Acessar Loja' url='/blog/posts'/>
           </div>
           <Image
-            src={imageShoop}
-            alt='image do mercado'
+            src={lojaEx}
+            alt='image loja'
           />
         </SwiperSlide>
 
@@ -53,8 +56,8 @@ export default function CarouselBanner() {
             <BtnAnchorGlassmorphism text='Acessar Loja' url='/blog/posts'/>
           </div>
           <Image
-            src={imageContact}
-            alt='image do contact'
+            src={doce}
+            alt='image doce'
           />
         </SwiperSlide>
 
@@ -65,8 +68,8 @@ export default function CarouselBanner() {
             <BtnAnchorGlassmorphism text='Acessar Loja' url='/blog/posts'/>
           </div>
           <Image
-            src={imageBlog}
-            alt='image do blog'
+            src={imageShoop}
+            alt='image do shop'
           />
         </SwiperSlide>
 
