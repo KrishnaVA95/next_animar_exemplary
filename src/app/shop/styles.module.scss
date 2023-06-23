@@ -1,0 +1,9 @@
+@use "../../scss/abstracts/" as *;
+
+.container{
+    max-width: 1350px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}

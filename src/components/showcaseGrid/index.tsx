@@ -9,6 +9,10 @@ export interface IPost {
     title: string;
     description: string;
     content: string[];
+    emphasis: boolean;
+    image: string;
+    created_at: string;
+    update_at: string
 }
 
 async function getPosts() {

@@ -8,11 +8,11 @@ export default async function NavList(){
     return(
         <ul className={styles.container}>
                     <li>
-                        <Link  href={`/blog/posts`}> Home</Link>
+                        <Link  href={`/`}> Home</Link>
                     </li>
                     <span>|</span>
                     <li>
-                        <Link  href={`/blog/posts`}> Animar</Link>
+                        <Link  href={`/animar`}> Animar</Link>
                     </li>
                     <span>|</span>
                     <li>
@@ -20,14 +20,13 @@ export default async function NavList(){
                     </li>
                     <span>|</span>
                     <li>
-                        <Link  href={`/blog/posts`}> Contato</Link>
+                        <Link  href={`/contacts`}> Contato</Link>
                     </li>
                     <span>|</span>
                     <li>
-                        <Link  href={`/blog/posts`}> Loja</Link>
+                        <Link  href={`/shop`}> Loja</Link>
                     </li>
                     <span>|</span>
         </ul>
-    ) 
-        
+    )       
 }

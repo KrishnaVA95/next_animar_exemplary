@@ -1,22 +1,22 @@
 import { api } from "@/services/api";
-import CardPost from "./cardPost"
+import CardProduct from "./cardProduct"
 import styles from "./styles.module.scss"
 import SeparatorPage from "@/components/separator";
 
-export interface IPost {
+export interface IProduct {
     id: number;
-    title: string;
+    name: string;
+    value: number;
     description: string;
-    content: string[];
     image: string;
     emphasis: boolean;
     created_at: string;
     update_at: string;
 }
 
-async function getPosts() {
+async function getProducts() {
     try {
-        const response = await api.get<IPost[]>('/posts')
+        const response = await api.get<[IProduct]>('/products')
         return response.data
     } catch (error) {
         console.error(error)
@@ -24,14 +24,14 @@ async function getPosts() {
     }
 }
 
-export default async function Showcase(){
-    const posts = await getPosts()
+export default async function ShowcaseFlex(){
+    const products = await getProducts()
     return(
         <>
-                <SeparatorPage title="Blog Animar"/>
+                <SeparatorPage title="Loja Animar"/>
                 <ul className={styles.container}>
-                    {posts.map((post) =>(
-                        <CardPost key={post.id} post={post}/>    
+                    {products.map((product) =>(
+                        <CardProduct key={product.id} product={product}/>    
                     ))}
                 </ul>
         </>

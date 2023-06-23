@@ -1,9 +1,8 @@
 import { api } from "@/services/api"
-
 import SeparatorPage  from "@/components/separator"
 import styles from "./styles.module.scss"
-import Image from 'next/image'
-import { IPost } from "@/components/showcaseGrid"
+import { IProduct } from "@/components/showcase"
+
 interface IPageProps{
     params: {id: string}
 }
@@ -17,26 +16,16 @@ interface IPageProps{
 //             _page: 1
 //         }
 //     })
-
 //     return response.data.map(post => ({...post, id: post.id +''}))
 // }
 
-export default async function PostPage({ params }: IPageProps){
-    const response = await api.get<IPost>(`posts/${params.id}/`)
-    const post =  response.data
+export default async function ProductDetail({ params }: IPageProps){
+    const response = await api.get<IProduct>(`products/${params.id}/`)
+    const product =  response.data
     return(
         <div className={styles.container}>
-            <SeparatorPage title={post.title}/>
-            {/* <Image
-                src={post.image}
-                alt='image do mercado'
-            /> */}
-            <ul>
-
-                {
-                    post.content.map(paragraph => <p key={paragraph.slice(0, 15)}>{paragraph}</p>)
-                }
-            </ul>
+            <SeparatorPage title={product.name}/>
+            <p>{product.description}</p>
         
         </div>
     )
